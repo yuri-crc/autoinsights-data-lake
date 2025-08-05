@@ -27,6 +27,7 @@ Construir um Data Lake com arquitetura em camadas (Bronze, Silver, Gold) utiliza
 
 ## 📐 Arquitetura
 
+
 ┌─────────────────────────┐
 │       Fontes de Dados    │
 ├─────────────────────────┤
@@ -37,6 +38,7 @@ Construir um Data Lake com arquitetura em camadas (Bronze, Silver, Gold) utiliza
 └─────────────┬───────────┘
               │
               ▼
+
       ┌────────────────┐
       │  Ingestão       │
       │ (Python/NiFi)   │
@@ -45,6 +47,7 @@ Construir um Data Lake com arquitetura em camadas (Bronze, Silver, Gold) utiliza
       └───────┬────────┘
               │ Dados brutos (raw)
               ▼
+      
       ┌────────────────────────┐
       │ Camada Bronze (Delta)  │
       │  - CSV/Parquet         │
@@ -52,6 +55,7 @@ Construir um Data Lake com arquitetura em camadas (Bronze, Silver, Gold) utiliza
       └─────────┬─────────────┘
                 │ Limpeza e padronização (Spark)
                 ▼
+      
       ┌────────────────────────┐
       │ Camada Silver (Delta)  │
       │  - Tipos corrigidos    │
